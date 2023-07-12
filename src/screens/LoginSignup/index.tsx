@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import backgroundImage from '../../images/background_image.png'
+import backgroundImage from '../../assets/images/background_image.png'
 import Card from '../../components/card/Card'
 import Background from '../../components/background/Background'
 import Button from '../../components/button/Button'
@@ -35,7 +35,7 @@ const WelcomeScreen = () => {
 
   return (
     <Background classname='App' backgroundImage={imageUrl}>
-      <Card>
+      <Card classname='card'>
         <Header classname='welcome_title' content='Welcome to Asset Mappr!' />
         <Subheader classname='welcome2_subtitle' content='Login or Sign Up to get started' />
         <Button type='submit' value='Sign Up' className='signup_button' onClick={signup}>

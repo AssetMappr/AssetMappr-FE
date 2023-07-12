@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect, SetStateAction, Dispatch, RefObject } from 'react'
 import Card from '../../components/card/Card'
-import './Signup.css'
-import backgroundImage from '../../images/background_image.png'
+import backgroundImage from '../../assets/images/background_image.png'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 
 import Background from '../../components/background/Background'
@@ -12,7 +11,7 @@ import Step1 from './Step1'
 import Step2 from './Step2'
 import WelcomeOnSignupScreen from './WelcomeOnSignup'
 import apiservice from '../../utils/api/apiservice'
-import ErrorMsg from '../../components/message/ErrorMsg'
+import ErrorMsg from '../../components/content/ErrorMsg'
 
 // TODO: these imports to be used during API call
 // import axios from "../../utils/api/appservice";
@@ -108,7 +107,7 @@ const Signup = () => {
 
   return (
     <Background classname='App' backgroundImage={imageUrl}>
-      <Card>
+      <Card classname='card'>
         <Routes>
           <Route
             path=''

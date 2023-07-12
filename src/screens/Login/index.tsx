@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, useContext } from 'react'
 import Card from '../../components/card/Card'
-import backgroundImage from '../../images/background_image.png'
+import backgroundImage from '../../assets/images/background_image.png'
 import Background from '../../components/background/Background'
 import Header from '../../components/title/header/Header'
 import InputField from '../../components/input/inputfield/InputField'
@@ -38,22 +38,11 @@ const Login = () => {
     // axios api
     event.preventDefault()
     login({ email: user, password })
-    // try {
-    //   const response = await axios.post(`${BASE_URL}/user/login`, {
-    //     email: user,
-    //     password: password,
-    //   })
-    //   Cookies.set(ACCESS_TOKEN, response.data.access_token)
-    //   Cookies.set(REFRESH_TOKEN, response.data.refresh_token)
-    //   navigate('/home')
-    // } catch (err) {
-    //   console.log(err)
-    // }
   }
 
   return (
     <Background classname='App' backgroundImage={imageUrl}>
-      <Card>
+      <Card classname='card'>
         <Header classname='login_header' content='Asset Mappr' />
         <Header classname='subheader' content='Login' />
         <form onSubmit={handleLogin}>
